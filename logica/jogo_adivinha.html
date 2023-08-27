@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+
+<script>
+    
+    function pulaLinha(){
+        document.write("<br><br>");
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    numAleatorio = Math.round(Math.random() * 10);
+
+    var numeroPensado = numAleatorio;
+
+    var tentativas = 1;
+
+    while (tentativas <= 10) {
+
+        var chute = parseInt(prompt("Digite seu chute:"));
+
+        if (chute == numeroPensado) {
+            mostra("Você ACERTOU!!!");
+            break;
+        } else {
+            mostra("Você errou!");
+        }
+        tentativas++;
+    }
+    mostra("Fim.");
+
+
+
+    mostra("E agora vamos mostrar todos os anos que tiveram copa do mundo desde o primeiro evento.");
+
+    var anoCopa = 1930;
+    
+    while(anoCopa <= 2023) {
+        
+        mostra("Teve copa em " + anoCopa);
+        anoCopa += 4;
+    }
+
+    mostra("Fim."); 
+</script>
